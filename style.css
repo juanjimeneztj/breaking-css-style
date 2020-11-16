@@ -1,0 +1,49 @@
+/**************************************
+HEADER STYLES
+**************************************/
+* { box-sizing: border-box; } 
+header .breaking{
+    background-color: #DD1E1E;
+    box-shadow: -10px 20px 40px rgb(0 0 0 / 97%);
+    display: inline-block;
+    margin: 40px auto 10px;
+    padding: 10px;
+    position: relative;
+}
+header .breaking::before{
+    border-right: 15px solid transparent;
+    border-top: 88px solid #DD1E1E;
+    content: '';
+    right: -15px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+header .breaking::after{
+    border-left: 15px solid transparent;
+    border-bottom: 88px solid #DD1E1E;
+    content: '';
+    left: -15px;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+header .breaking h1,header .breaking h1 *{
+    color: #fff;
+    font-size: 60px;
+    font-family: 'Roboto', sans-serif!important;
+    font-weight: bold!important;
+    margin: 0;
+    text-transform: uppercase;
+}
+@media all and (max-width: 767px){
+    header .breaking::before{
+        border-top: 68px solid #DD1E1E;
+    }
+    header .breaking::after{
+        border-bottom: 68px solid #DD1E1E;
+    }
+    header .breaking h1,header .breaking h1 *{
+        font-size: 40px;
+    }
+}
